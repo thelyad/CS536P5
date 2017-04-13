@@ -1,0 +1,64 @@
+int foo() {
+    return 1;
+}
+
+void foo2() {
+    return;
+}
+
+int foo3(int a, bool b) {
+    return 2;
+}
+
+int foo4() {
+    return;
+}
+
+bool foo5() {
+    return;
+}
+
+bool foo6() {
+    return true;
+}
+
+struct P{
+    int a;
+};
+
+int main() {
+    struct P p;
+    int a;
+    bool b;
+    cout << foo(->int);
+    cout << P(struct);
+    cout << p(P);
+    cout << foo2(->void)();
+    cin >> foo(->int);
+    cin >> P(struct);
+    cin >> p(P);
+    a(int)();
+    b(bool)();
+    p(P)();
+    a(int)(p(P));
+    foo3(int,bool->int)();
+    foo3(int,bool->int)(a(int));
+    foo3(int,bool->int)(b(bool), a(int));
+    foo3(int,bool->int)(a(int), p(P));
+    a(int) = foo4(->int)();
+    b(bool) = foo5(->bool)();
+    a(int) = foo2(->void)();
+    b(bool) = foo(->int)();
+    a(int) = foo6(->bool)();
+    a(int) = (true + 1);
+    a(int) = (true + false);
+    a(int) = (false - 1);
+    a(int) = (false - true);
+    a(int) = (true * 1);
+    a(int) = (true * false);
+    a(int) = (true / 1);
+    a(int) = (true / false);
+    b(bool)++;
+    b(bool)--;
+}
+
